@@ -1,0 +1,168 @@
+//Question1
+#include <stdio.h>
+
+int main() {
+    int numbers[10];
+    int i, positiveCount = 0, negativeCount = 0, zeroCount = 0;
+
+    printf("Enter 10 numbers:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    for (i = 0; i < 10; i++) {
+        if (numbers[i] > 0) {
+            positiveCount++;
+        } else if (numbers[i] < 0) {
+            negativeCount++;
+        } else {
+            zeroCount++;
+        }
+    }
+
+    printf("Positive numbers: %d\n", positiveCount);
+    printf("Negative numbers: %d\n", negativeCount);
+    printf("Zeros: %d\n", zeroCount);
+
+    return 0;
+}
+//Question2
+#include <stdio.h>
+
+int main() {
+    int marks[10];
+    int i, totalMarks = 0, maxMarks, minMarks;
+
+    printf("Enter marks of 10 students:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &marks[i]);
+        totalMarks += marks[i];
+
+        if (i == 0) {
+            maxMarks = marks[i];
+            minMarks = marks[i];
+        } else {
+            if (marks[i] > maxMarks) {
+                maxMarks = marks[i];
+            }
+            if (marks[i] < minMarks) {
+                minMarks = marks[i];
+            }
+        }
+    }
+
+    double averageMarks = (double) totalMarks / 10;
+
+    printf("Maximum Marks: %d\n", maxMarks);
+    printf("Minimum Marks: %d\n", minMarks);
+    printf("Average Marks: %.2lf\n", averageMarks);
+
+    return 0;
+}
+//Question3
+#include <stdio.h>
+
+int main() {
+    double prices[10];
+    int i, count = 0;
+    double total = 0.0;
+
+    printf("Enter prices of 10 items:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%lf", &prices[i]);
+        total += prices[i];
+
+        if (prices[i] > 200) {
+            count++;
+        }
+    }
+
+    double average = total / 10;
+
+    printf("Average value of an item: %.2lf\n", average);
+    printf("Number of items with price > 200: %d\n", count);
+
+    return 0;
+}
+Question4
+#include <stdio.h>
+
+int main() {
+    int employeeNo, count = 0;
+    double basicSalary;
+
+    printf("Enter employee number and basic salary : \n");
+
+    while (1) {
+        scanf("%d", &employeeNo);
+
+        if (employeeNo == -999) {
+            break;
+        }
+
+        scanf("%lf", &basicSalary);
+
+        if (basicSalary >= 5000) {
+            count++;
+        }
+    }
+
+    printf("Number of employees with a basic salary >= 5000: %d\n", count);
+
+    return 0;
+}
+//Question5
+#include <stdio.h>
+
+int main() {
+    int employeeNo, count = 0, overtimeCount = 0;
+    double hoursWorked, overtimePayment, totalOvertimePayment = 0.0;
+
+    printf("Enter employee number and hours worked :\n");
+
+    scanf("%d", &employeeNo);
+
+    while (employeeNo != -999) {
+        scanf("%lf", &hoursWorked);
+
+        if (hoursWorked > 40) {
+            overtimePayment = 150 * 40 + 200 * (hoursWorked - 40);
+        } else {
+            overtimePayment = 150 * hoursWorked;
+        }
+        printf("Employee number: %d\n", employeeNo);
+        printf("Overtime payment: %.2lf\n", overtimePayment);
+
+        totalOvertimePayment += overtimePayment;
+        count++;
+        if (overtimePayment > 4000) {
+            overtimeCount++;
+        }
+        scanf("%d", &employeeNo);
+    }
+    double percentageExceeding4000 = (double) overtimeCount / count * 100;
+
+    printf("\nSummary:\n");
+    printf("Total employees: %d\n", count);
+    printf("Total overtime payment: %.2lf\n", totalOvertimePayment);
+    printf("Percentage of employees with overtime payment exceeding Rs. 4000: %.2lf%%\n", percentageExceeding4000);
+
+}
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
