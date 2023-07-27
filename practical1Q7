@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main() {
+    int x,y,temp;
+    printf("enter the x value");
+    scanf("%d",&x);
+    printf("enter the y value");
+    scanf("%d",&y);
+    temp=x;
+    x=y;
+    y=temp;
+    printf("now the x value is=%d\n y value is=%d",x,y);
+    
+}
