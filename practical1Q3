@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+            int a;
+            float b;
+            double c;
+            char w;
+            printf("enter the integer");
+            scanf("%d",&a);
+            printf("enter the float");
+            scanf("%f",&b);
+            printf("enter the double");
+            scanf("%lf",&c);
+            printf("enter the char");
+            scanf("%s",&w);
+            printf("the 4 variables,%d,%f,%lf,%s"  a,b,c,w);
+                        }
+
