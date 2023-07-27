@@ -1,0 +1,36 @@
+//while loop
+#include <stdio.h>
+
+int main() {
+    int x = 0;
+
+    while (x <= 100) {
+        printf("%d ", x);
+        x++;
+    }
+
+    return 0;
+}
+//Do..while
+#include <stdio.h>
+
+int main() {
+    int x= 0;
+
+    do {
+        printf("%d ", x);
+        x++;
+    } while (x <= 100);
+
+    return 0;
+}
+//for
+#include <stdio.h>
+
+int main() {
+    for (int x = 0; x <= 100; x++) {
+        printf("%d ", x);
+    }
+
+    return 0;
+
