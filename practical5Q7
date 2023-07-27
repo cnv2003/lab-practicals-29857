@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int x = 10;
+    int fib[x];
+    int i;
+
+    fib[0] = 0;
+    fib[1] = 1;
+
+    for (i = 2; i < x; i++) {
+        fib[i] = fib[i-1] + fib[i-2];
+    }
+
+    printf("The first 10 numbers of the Fibonacci sequence are:\n");
+    for (i = 0; i < x; i++) {
+        printf("%d ", fib[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
