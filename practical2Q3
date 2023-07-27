@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main() {
+    int distance,time;
+    float average;
+    printf("enter distance travelled");
+    scanf("%d",&distance);
+    printf("enter the time taken");
+    scanf("%d",&time);
+    average=distance/time;
+    printf("average speed is %f",average);
+}
